@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+@font-face {
+    font-family: MuseoSans500;
+    src: url('./assets/fonts/MuseoSansRounded500.otf');
+}
+
+@font-face {
+    font-family: MuseoSans900;
+    src: url('./assets/fonts/MuseoSansRounded900.otf');
+}
+
+
 *{
-    font-family: Open Sans;
+    font-family: MuseoSans500!important;
 }

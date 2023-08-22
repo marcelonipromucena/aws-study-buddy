@@ -1,12 +1,8 @@
 import { QuestionNavbarWrapper, QuestionNavbarItem } from "./styles";
-import { FiStar, FiClock, FiFileText } from "react-icons/fi";
+import { FiStar, FiClock, FiFileText, FiX } from "react-icons/fi";
 
-function QuestionNavbar({currentQuestion, reviewList}) {
-
-  const addToReview = () => {
-
-
-  }
+function QuestionNavbar({ currentQuestion, reviewList }) {
+  const addToReview = () => {};
   return (
     <QuestionNavbarWrapper>
       <QuestionNavbarItem>
@@ -19,6 +15,9 @@ function QuestionNavbar({currentQuestion, reviewList}) {
       </QuestionNavbarItem>
       <QuestionNavbarItem>
         <FiStar /> &nbsp; Revisar
+      </QuestionNavbarItem>
+      <QuestionNavbarItem>
+        <FiX /> &nbsp; Sair
       </QuestionNavbarItem>
     </QuestionNavbarWrapper>
   );

@@ -1,7 +1,7 @@
 import { QuestionWrapper, QuestionText,QuestionChoices } from "./styles-question";
-import QuestionNavbar from "../components/question-navbar";
-import Choice from '../components/choice';
-import CustomButton from '../components/button';
+import QuestionNavbar from "../components/question-navbar/question-navbar";
+import Choice from '../components/choice/choice';
+import CustomButton from '../components/button/button';
 
 function Question() {
   return (

@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const QuestionNavbarWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: #000;
-  font-size: 20px;
-`;
-
-export const QuestionNavbarItem = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const ChoiceDefault = styled.div`
   border: 1px solid #7f3cec;
   border-radius: 10px;
@@ -55,21 +42,3 @@ export const ChoiceSuccess = styled.div`
 
 export const TextWrapper = styled.div``;
 export const IconWrapper = styled.div``;
-
-export const ButtonWrapper = styled.div``;
-export const Button = styled.button`
-  width: 100%;
-  background: #7f3cec;
-  color: #fff;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
-
-  &:hover {
-    border: 1px solid #7f3cec;
-    background: #fff;
-    color: #000;
-    transition: all 0.2s ease;
-  }
-`;
