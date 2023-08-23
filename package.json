@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sentry/react": "^7.64.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -23,10 +22,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn run sentry:sourcemaps",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org aws-study-buddy --project aws-study-buddy node_modules && sentry-cli sourcemaps upload --org aws-study-buddy --project aws-study-buddy node_modules"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
