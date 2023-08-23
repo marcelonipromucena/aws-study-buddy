@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.697bf6a8.css",
+    "main.js": "/static/js/main.5477b25e.js",
+    "static/media/logo-my-study-buddy.png": "/static/media/logo-my-study-buddy.acfaa0916fa4b2621ebd.png",
+    "static/media/MuseoSansRounded900.otf": "/static/media/MuseoSansRounded900.849a99f791733451cf35.otf",
+    "static/media/MuseoSansRounded500.otf": "/static/media/MuseoSansRounded500.742d80d6fe4774f224db.otf",
+    "index.html": "/index.html",
+    "static/media/google.svg": "/static/media/google.69bd2cffbcb9c58518df30ee13f10195.svg",
+    "main.697bf6a8.css.map": "/static/css/main.697bf6a8.css.map",
+    "main.5477b25e.js.map": "/static/js/main.5477b25e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.697bf6a8.css",
+    "static/js/main.5477b25e.js"
+  ]
+}
