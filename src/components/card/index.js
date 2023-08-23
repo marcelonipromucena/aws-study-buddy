@@ -1,11 +1,17 @@
 import { CustomCard, Title, Subtitle } from "./styles";
+import { Row, Col } from "react-bootstrap";
+
 function Card({ title, subtitle, children }) {
   return (
-    <CustomCard md={8}>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-      {children}
-    </CustomCard>
+    <Row className="p-0 m-0">
+      <Col md={2}></Col>
+      <CustomCard md >
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        <Row className="p-0 m-0">{children}</Row>
+      </CustomCard>
+      <Col md={2}></Col>
+    </Row>
   );
 }
 

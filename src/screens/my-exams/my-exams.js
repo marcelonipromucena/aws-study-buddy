@@ -1,118 +1,85 @@
+import { Col, Row } from "react-bootstrap";
+import { PiExam, PiSealQuestionLight } from "react-icons/pi";
 import BodyWrapper from "../../components/body-wrapper";
-import { Row, Col } from "react-bootstrap";
 import Card from "../../components/card";
-
-import {
-  BreadcrumbWrapper,
-  WrapperProgressItems,
-  ProgressWrapper,
-  ProgressItemTitle,
-  ProgressText,
-  WrapperProgressBody,
-  WrapperProgressHeader,
-} from "./styles";
-import ProgressBar from "../../components/progress-bar";
-import { AiOutlineLineChart, AiOutlineInfoCircle } from "react-icons/ai";
-import CountUp from "react-countup";
+import ExamItem from "./exam-item";
+import { ExamInfo, WrapperExams } from "./styles";
 
 function MyExams() {
+  const breadcrumb = [
+    { key: "Home", value: "/" },
+    { key: "My Dashboard", value: "/my-dashboard" },
+    { key: "My Exams", value: "/my-dashboard/my-exams" },
+  ];
+
   return (
-    <BodyWrapper enableNavbar>
-      <BreadcrumbWrapper>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        &nbsp;/&nbsp;
-        <li>
-          <a href="/my-dashboard">My Dashboard</a>
-        </li>
-        &nbsp;/&nbsp;
-        <li>
-          <a href="/my-dashboard/my-progress">My Exams</a>
-        </li>
-      </BreadcrumbWrapper>
+    <BodyWrapper enableNavbar breadcrumb={breadcrumb}>
       <Row>
         <Col md={2}></Col>
         <Card
-          md={8}
           title={"My Exams"}
-          subtitle={"Here's a list of all courses you have access to."}
+          subtitle={"Here's a list of all exams you have access to."}
         >
-          <Col md={12}>
-            <WrapperProgressItems>
-              <Col>
-                <ProgressWrapper bgcolor={"#7f3cec"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Tests taken</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={7} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+          <Row>
+            <WrapperExams>
+              <ExamItem
+                bgcolor={"#0d1e91"}
+                bordercolor={"#3c92f9"}
+                imgSrc={"/badge-aws-solutions-architect-associate.png"}
+                examTitle={" AWS Solutions Architect Associate - SAA-C03"}
+                examInfos={
+                  <>
+                    <ExamInfo>
+                      <PiExam size={30} />
+                      &nbsp; 5 Tests
+                    </ExamInfo>
+                    <ExamInfo>
+                      <PiSealQuestionLight size={30} />
+                      &nbsp; 325 Questions
+                    </ExamInfo>
+                  </>
+                }
+              />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#82dd55"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Correct answers</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={209} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+              <ExamItem
+                bgcolor={"#0d1e91"}
+                bordercolor={"#3c92f9"}
+                imgSrc={"/badge-aws-developer-associate.png"}
+                examTitle={"AWS Developer Associate - DVA-C02"}
+                examInfos={
+                  <>
+                    <ExamInfo>
+                      <PiExam size={30} />
+                      &nbsp; 5 Tests
+                    </ExamInfo>
+                    <ExamInfo>
+                      <PiSealQuestionLight size={30} />
+                      &nbsp; 325 Questions
+                    </ExamInfo>
+                  </>
+                }
+              />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#e23636"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Incorrect answers</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={209} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
-
-              <Col>
-                <ProgressWrapper bgcolor={"#59a6e4"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Questions taken</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={418} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
-            </WrapperProgressItems>
-          </Col>
+              <ExamItem
+                bgcolor={"#5536b8"}
+                bordercolor={"#7A77FA"}
+                imgSrc={"/badge-aws-security-specialty.png"}
+                examTitle={"AWS Security Specialty - SCS-C02"}
+                examInfos={
+                  <>
+                    <ExamInfo>
+                      <PiExam size={30} />
+                      &nbsp; 5 Tests
+                    </ExamInfo>
+                    <ExamInfo>
+                      <PiSealQuestionLight size={30} />
+                      &nbsp; 325 Questions
+                    </ExamInfo>
+                  </>
+                }
+              />
+            </WrapperExams>
+          </Row>
         </Card>
         <Col md={2}></Col>
       </Row>

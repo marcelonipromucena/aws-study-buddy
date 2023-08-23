@@ -45,16 +45,27 @@ export const BreadcrumbWrapper = styled.ul`
   }
 `;
 
-export const WrapperAccountOptions = styled.div`
+export const WrapperAccountOptions = styled(Col)`
   margin-top: 15px;
+  /* *:not(:first-child):not(:last-child) {
+    margin-left: 15px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 15px;
+
+    @media (min-width: 0px) and (max-width: 1250px) {
+      margin-left: 0px;
+    }
+  } */
 `;
 export const AccountOption = styled.a`
   display: flex;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  text-decoration:none;
-  color:#7f3cec;
+  text-decoration: none;
+  color: #7f3cec;
   border: 1px solid #7f3cec;
   border-radius: 10px;
   padding: 15px;

@@ -1,6 +1,32 @@
 import styled from "styled-components";
 import { Col, Row } from "react-bootstrap";
 
+export const BreadcrumbWrapper = styled.ul`
+  display: flex;
+  background: #efefef;
+  height: 50px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  li {
+    display: inline;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      transition: all 0.2s ease;
+      color: #000;
+      font-size: 20px;
+
+      &:hover {
+        color: #7f3cec;
+        font-size: 20px;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+`;
+
 export const WrapperExams = styled.div`
   a {
     text-decoration: none;
@@ -15,10 +41,10 @@ export const WrapperExam = styled(Row)`
   transition: all 0.2s ease;
 
   &:hover {
-    ${({ bgcolor }) => bgcolor && `background: ${bgcolor};`};
+    ${({ bgColor }) => bgColor && `background: ${bgColor};`};
     transition: all 0.2s ease;
     color: #fff;
-    ${({ bordercolor }) => bordercolor && `border: 1px solid ${bordercolor};`};
+    ${({ borderColor }) => borderColor && `border: 1px solid ${borderColor};`};
   }
 `;
 export const WrapperExamLeft = styled(Col)``;

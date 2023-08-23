@@ -1,163 +1,89 @@
-import BodyWrapper from "../../components/body-wrapper";
-import { Row, Col } from "react-bootstrap";
-import Card from "../../components/card";
-
-import {
-  BreadcrumbWrapper,
-  WrapperProgressItems,
-  ProgressWrapper,
-  ProgressItemTitle,
-  ProgressText,
-  WrapperProgressBody,
-  WrapperProgressHeader,
-  ProgressItemSubtitle,
-} from "./styles";
-import ProgressBar from "../../components/progress-bar";
-import { AiOutlineLineChart, AiOutlineInfoCircle } from "react-icons/ai";
 import CountUp from "react-countup";
+import { AiOutlineLineChart } from "react-icons/ai";
+import { FiClock } from "react-icons/fi";
+import BodyWrapper from "../../components/body-wrapper";
+import Card from "../../components/card";
+import ProgressCard from "./progress-card";
+import { WrapperProgressItems } from "./styles";
 
 function MyProgress() {
+  const breadcrumb = [
+    { key: "Home", value: "/" },
+    { key: "My Dashboard", value: "/my-dashboard" },
+    { key: "My Progress", value: "/my-dashboard/my-progress" },
+  ];
+
   return (
-    <BodyWrapper enableNavbar>
-      <BreadcrumbWrapper>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        &nbsp;/&nbsp;
-        <li>
-          <a href="/my-dashboard">My Dashboard</a>
-        </li>
-        &nbsp;/&nbsp;
-        <li>
-          <a href="/my-dashboard/my-progress">My Progress</a>
-        </li>
-      </BreadcrumbWrapper>
-      <Row>
-        <Col md={2}></Col>
-        <Card
-          md={8}
-          title={"My Progress"}
-          subtitle={"Here you can check your progress in a visual manner."}
-        >
-          <Col md={12}>
-            <WrapperProgressItems>
-              <Col>
-                <ProgressWrapper bgcolor={"#7f3cec"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Exams taken</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={7} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+    <BodyWrapper enableNavbar breadcrumb={breadcrumb}>
+      <Card
+        title={"My Progress"}
+        subtitle={"Here you can check your progress in a visual manner."}
+      >
+        <WrapperProgressItems>
+          <ProgressCard
+            bgcolor={"#7f3cec"}
+            title={"Exams taken"}
+            value={<CountUp end={7} />}
+            icon={
+              <AiOutlineLineChart
+                className={"progress-icon"}
+                size={90}
+                color={"white"}
+              />
+            }
+          />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#82dd55"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Correct answers</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={209} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+          <ProgressCard
+            bgcolor={"#82dd55"}
+            title={"Correct answers"}
+            value={<CountUp end={209} />}
+            icon={<AiOutlineLineChart size={90} color={"white"} />}
+          />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#e23636"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Incorrect answers</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={209} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+          <ProgressCard
+            bgcolor={"#e23636"}
+            title={"Incorrect answers"}
+            value={<CountUp end={209} />}
+            icon={<AiOutlineLineChart size={90} color={"white"} />}
+          />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#59a6e4"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>Questions taken</ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      <CountUp end={418} />
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
-            </WrapperProgressItems>
-            <WrapperProgressItems>
-              <Col>
-                <ProgressWrapper bgcolor={"#59a6e4"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>
-                      Avg. Time per Question
-                    </ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      04m 18s
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
+          <ProgressCard
+            bgcolor={"#59a6e4"}
+            title={"Questions taken"}
+            value={<CountUp end={418} />}
+            icon={<AiOutlineLineChart size={90} color={"white"} />}
+          />
+        </WrapperProgressItems>
+        <WrapperProgressItems>
+          <ProgressCard
+            bgcolor={"#59a6e4"}
+            title={"Avg. Time per Question"}
+            value={"04m 18s"}
+            icon={<FiClock size={90} color={"white"} />}
+          />
 
-              <Col>
-                <ProgressWrapper bgcolor={"#59a6e4"} sm={12} md={3}>
-                  <WrapperProgressHeader>
-                    <ProgressItemTitle>
-                      Avg. Time per Exam
-                    </ProgressItemTitle>
-                  </WrapperProgressHeader>
-                  <WrapperProgressBody>
-                    <ProgressText>
-                      108min 
-                    </ProgressText>
-                    <AiOutlineLineChart
-                      className={"progress-icon"}
-                      size={90}
-                      color={"white"}
-                    />
-                  </WrapperProgressBody>
-                </ProgressWrapper>
-              </Col>
-            </WrapperProgressItems>
-          </Col>
-        </Card>
-        <Col md={2}></Col>
-      </Row>
+          <ProgressCard
+            bgcolor={"#b8e0d2"}
+            title={"Avg. Time per Exam"}
+            value={"108min"}
+            icon={<FiClock size={90} color={"white"} />}
+          />
+        </WrapperProgressItems>
+        <WrapperProgressItems>
+          <ProgressCard
+            bgcolor={"#eac4d5"}
+            title={"Your Best Scoring Domain"}
+            value={"Security"}
+            icon={<AiOutlineLineChart size={90} color={"white"} />}
+          />
+          <ProgressCard
+            bgcolor={"#95b8d1"}
+            title={"Your Worst Scoring Domain"}
+            value={"Security"}
+            icon={<AiOutlineLineChart size={90} color={"white"} />}
+          />
+        </WrapperProgressItems>
+      </Card>
     </BodyWrapper>
   );
 }

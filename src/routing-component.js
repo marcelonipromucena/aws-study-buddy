@@ -9,6 +9,7 @@ import AboutUs from "./screens/about-us/about-us";
 import ContactUs from "./screens/contact-us/contact-us";
 import MyProgress from "./screens/my-progress/my-progress";
 import MyExams from "./screens/my-exams/my-exams";
+import ExamDetails from "./screens/exam-details/exam-details";
 
 export default function RoutingComponent() {
   return (
@@ -21,6 +22,7 @@ export default function RoutingComponent() {
         <Route path="/my-dashboard" exact element={<Dashboard/>} />
         <Route path="/my-dashboard/my-progress" exact element={<MyProgress/>} />
         <Route path="/my-dashboard/my-exams" exact element={<MyExams/>} />
+        <Route path="/my-dashboard/my-exams/exam-details/:exam_name" exact element={<ExamDetails/>} />
         <Route path="/contact-us" exact element={<ContactUs/>} />
       </Routes>
     </BrowserRouter>

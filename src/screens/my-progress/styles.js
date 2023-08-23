@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Col, Row } from "react-bootstrap";
+import styled from "styled-components";
 
 export const Card = styled(Col)`
   background: #fff;
@@ -47,13 +47,13 @@ export const BreadcrumbWrapper = styled.ul`
 
 export const WrapperProgressItems = styled(Row)`
   display: flex;
+  justify-content: space-between;
 `;
 export const ProgressWrapper = styled.div`
   ${({ bgcolor }) => bgcolor && `background: ${bgcolor};`};
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 15px;
-  margin: 15px 0;
 `;
 export const ProgressItemTitle = styled.div`
   font-size: 30px;
