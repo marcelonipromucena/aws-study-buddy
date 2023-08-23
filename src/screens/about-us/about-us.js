@@ -1,26 +1,26 @@
 import BodyWrapper from "../../components/body-wrapper";
-import { Card, Title,Subtitle } from "./styles";
 import { Row, Col } from "react-bootstrap";
+import Card from "../../components/card";
 import Text from "../../components/text/text";
 function AboutUs() {
   return (
     <BodyWrapper enableNavbar>
       <Row style={{ justifyContent: "center" }}>
         <Col md={2}></Col>
-        <Card md={8}>
-          <Title>About US</Title>
-          <Subtitle>
-            Here you can learn more about our principles and goals.
-          </Subtitle>
-          <p>&nbsp;</p>
+
+        <Card
+          md={8}
+          title={"About Us"}
+          subtitle={"Here you can learn more about our principles and goals."}
+        >
           <Text textAlign={"left"} fontSize={"30"}>
             <p>
-              At IT Stage, we are driven by an unwavering passion for
-              technology improvement. Our journey began with a simple yet
-              profound belief: that technology has the power to transform the
-              world, to make it better, smarter, and more connected. This belief
-              fuels our every endeavor, propelling us forward on a relentless
-              quest for innovation and progress.
+              At IT Stage, we are driven by an unwavering passion for technology
+              improvement. Our journey began with a simple yet profound belief:
+              that technology has the power to transform the world, to make it
+              better, smarter, and more connected. This belief fuels our every
+              endeavor, propelling us forward on a relentless quest for
+              innovation and progress.
             </p>
             <p>
               In the fast-paced world of technology, staying ahead of the curve

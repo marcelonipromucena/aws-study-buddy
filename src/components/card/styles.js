@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
 
-export const Card = styled(Col)`
+export const CustomCard = styled(Col)`
   background: #fff;
   border-radius: 6px;
   padding: 20px;
