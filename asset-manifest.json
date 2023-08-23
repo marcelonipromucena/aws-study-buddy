@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/marcelonipromucena.github.io/aws-study-buddy/static/css/main.5b89c238.css",
+    "main.js": "/marcelonipromucena.github.io/aws-study-buddy/static/js/main.a1a8e591.js",
+    "static/media/logo-my-study-buddy.png": "/marcelonipromucena.github.io/aws-study-buddy/static/media/logo-my-study-buddy.acfaa0916fa4b2621ebd.png",
+    "static/media/MuseoSansRounded900.otf": "/marcelonipromucena.github.io/aws-study-buddy/static/media/MuseoSansRounded900.849a99f791733451cf35.otf",
+    "static/media/MuseoSansRounded500.otf": "/marcelonipromucena.github.io/aws-study-buddy/static/media/MuseoSansRounded500.742d80d6fe4774f224db.otf",
+    "index.html": "/marcelonipromucena.github.io/aws-study-buddy/index.html",
+    "static/media/google.svg": "/marcelonipromucena.github.io/aws-study-buddy/static/media/google.69bd2cffbcb9c58518df30ee13f10195.svg",
+    "main.5b89c238.css.map": "/marcelonipromucena.github.io/aws-study-buddy/static/css/main.5b89c238.css.map",
+    "main.a1a8e591.js.map": "/marcelonipromucena.github.io/aws-study-buddy/static/js/main.a1a8e591.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b89c238.css",
+    "static/js/main.a1a8e591.js"
+  ]
+}
