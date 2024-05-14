@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Row } from "react-bootstrap";
+import { FiSend } from "react-icons/fi";
 import BodyWrapper from "../../components/body-wrapper";
-import { Row, Col } from "react-bootstrap";
+import Button from "../../components/button/button";
 import Card from "../../components/card";
 import Input from "../../components/input/input";
-import Button from "../../components/button/button";
-import { FiSend } from "react-icons/fi";
 
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -17,7 +17,7 @@ function ContactUs() {
   const TEMPLATE_ID = "template_zejfheh";
 
   const sendEmail = () => {
-    console.log('Sending email...');
+    console.log("Sending email...");
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, "mensagem de teste", "YOUR_USER_ID")
@@ -33,43 +33,38 @@ function ContactUs() {
 
   return (
     <BodyWrapper enableNavbar>
-      <Row style={{ justifyContent: "center" }}>
-        <Col md={2}></Col>
-        <Card
-          md={8}
-          title={"Contact Us"}
-          subtitle={"Fill up our form bellow and we'll respond you asap."}
-        >
-          <Row>
-            <Input
-              type="text"
-              label="Name"
-              placeholder="John Doe"
-              value={name}
-              onChange={setName}
-            />
-            <Input
-              type="email"
-              label="Email"
-              placeholder="john@gmail.com"
-              value={email}
-              onChange={setEmail}
-            />
-            <Input
-              type="phone"
-              label="Phone Number"
-              placeholder="+5512345678"
-              value={phone}
-              onChange={setPhone}
-            />
-            <p>&nbsp;</p>
-            <Button onClick={sendEmail}>
-              <FiSend /> Send
-            </Button>
-          </Row>
-        </Card>
-        <Col md={2}></Col>
-      </Row>
+      <Card
+        title={"Contact Us"}
+        subtitle={"Fill up our form bellow and we'll respond you asap."}
+      >
+        <Row>
+          <Input
+            type="text"
+            label="Name"
+            placeholder="John Doe"
+            value={name}
+            onChange={setName}
+          />
+          <Input
+            type="email"
+            label="Email"
+            placeholder="john@gmail.com"
+            value={email}
+            onChange={setEmail}
+          />
+          <Input
+            type="phone"
+            label="Phone Number"
+            placeholder="+5512345678"
+            value={phone}
+            onChange={setPhone}
+          />
+          <p>&nbsp;</p>
+          <Button onClick={sendEmail}>
+            <FiSend /> Send
+          </Button>
+        </Row>
+      </Card>
     </BodyWrapper>
   );
 }

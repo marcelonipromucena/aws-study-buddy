@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import {
-  NavbarWrapper,
   NavbarBrand,
+  NavbarBrandImage,
   NavbarLink,
   NavbarLinkDropdown,
   NavbarLinkDropdownItem,
-  WrapperShoppingCartIcon,
+  NavbarWrapper,
   NotificationPoint,
-  NavbarBrandImage
+  WrapperShoppingCartIcon
 } from "./styles";
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { FiUser, FiMenu, FiShoppingCart } from "react-icons/fi";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Navbar from "react-bootstrap/Navbar";
+import { FiMenu, FiShoppingCart, FiUser } from "react-icons/fi";
 
 const CustomNavbar = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
@@ -56,7 +56,7 @@ const CustomNavbar = () => {
   const createGuestComponents = () => {
     return (
       <NavbarLink href="/sign-in">
-        <FiUser size={35} /> SIGN IN / SIGN UP
+        <FiUser size={35} /> SIGN IN
       </NavbarLink>
     );
   };

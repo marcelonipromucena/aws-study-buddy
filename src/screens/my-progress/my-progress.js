@@ -19,7 +19,7 @@ function MyProgress() {
         title={"My Progress"}
         subtitle={"Here you can check your progress in a visual manner."}
       >
-        <WrapperProgressItems>
+        <WrapperProgressItems className="p-0 m-0">
           <ProgressCard
             bgcolor={"#7f3cec"}
             title={"Exams taken"}
@@ -31,6 +31,7 @@ function MyProgress() {
                 color={"white"}
               />
             }
+            md={3}
           />
 
           <ProgressCard
@@ -38,6 +39,7 @@ function MyProgress() {
             title={"Correct answers"}
             value={<CountUp end={209} />}
             icon={<AiOutlineLineChart size={90} color={"white"} />}
+            md={3}
           />
 
           <ProgressCard
@@ -45,6 +47,7 @@ function MyProgress() {
             title={"Incorrect answers"}
             value={<CountUp end={209} />}
             icon={<AiOutlineLineChart size={90} color={"white"} />}
+            md={3}
           />
 
           <ProgressCard
@@ -52,14 +55,17 @@ function MyProgress() {
             title={"Questions taken"}
             value={<CountUp end={418} />}
             icon={<AiOutlineLineChart size={90} color={"white"} />}
+            md={3}
           />
         </WrapperProgressItems>
-        <WrapperProgressItems>
+        <WrapperProgressItems className="p-0 m-0">
           <ProgressCard
             bgcolor={"#59a6e4"}
             title={"Avg. Time per Question"}
-            value={"04m 18s"}
+            value={"04m"}
+            md={6}
             icon={<FiClock size={90} color={"white"} />}
+            md={6}
           />
 
           <ProgressCard
@@ -67,20 +73,23 @@ function MyProgress() {
             title={"Avg. Time per Exam"}
             value={"108min"}
             icon={<FiClock size={90} color={"white"} />}
+            md={6}
           />
         </WrapperProgressItems>
-        <WrapperProgressItems>
+        <WrapperProgressItems className="p-0 m-0">
           <ProgressCard
             bgcolor={"#eac4d5"}
             title={"Your Best Scoring Domain"}
             value={"Security"}
             icon={<AiOutlineLineChart size={90} color={"white"} />}
+            md={6}
           />
           <ProgressCard
             bgcolor={"#95b8d1"}
             title={"Your Worst Scoring Domain"}
             value={"Security"}
             icon={<AiOutlineLineChart size={90} color={"white"} />}
+            md={6}
           />
         </WrapperProgressItems>
       </Card>

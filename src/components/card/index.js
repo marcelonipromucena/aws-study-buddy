@@ -1,5 +1,5 @@
-import { CustomCard, Title, Subtitle } from "./styles";
-import { Row, Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import { CustomCard, Subtitle, Title } from "./styles";
 
 function Card({ title, subtitle, children }) {
   return (

@@ -1,14 +1,14 @@
+import Text from '../../components/text';
 import {
   AccountOption,
-  AccountOptionText,
-  WrapperAccountOptions,
+  WrapperAccountOptions
 } from "./styles";
 function DashboardCard({ href, icon, title }) {
   return (
     <WrapperAccountOptions sm={12} md={4}>
       <AccountOption href={href}>
         {icon}
-        <AccountOptionText>{title}</AccountOptionText>
+        <Text>{title}</Text>
       </AccountOption>
     </WrapperAccountOptions>
   );

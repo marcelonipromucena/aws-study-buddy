@@ -1,4 +1,4 @@
-import {  Button } from "./styles";
+import { Button } from "./styles";
 
 function CustomButton({ children }) {
   return <Button>{children}</Button>;

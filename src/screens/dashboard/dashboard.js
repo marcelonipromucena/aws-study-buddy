@@ -19,21 +19,23 @@ function Dashboard() {
           "Here you can manage your account and view your progress throughout the course."
         }
       >
-        <DashboardCard
-          href={"/my-dashboard/my-exams"}
-          icon={<PiExam size={70} />}
-          title={"My Exams"}
-        />
-        <DashboardCard
-          href={"/my-dashboard/my-progress"}
-          icon={<GiLevelEndFlag size={70} />}
-          title={"My Progress"}
-        />
-        <DashboardCard
-          href={"/my-dashboard/flashcards"}
-          icon={<GiCard10Clubs size={70} />}
-          title={"Flashcards"}
-        />
+        <Row className="p-0 m-0">
+          <DashboardCard
+            href={"/my-dashboard/my-exams"}
+            icon={<PiExam size={70} />}
+            title={"My Exams"}
+          />
+          <DashboardCard
+            href={"/my-dashboard/my-progress"}
+            icon={<GiLevelEndFlag size={70} />}
+            title={"My Progress"}
+          />
+          <DashboardCard
+            href={"/my-dashboard/flashcards"}
+            icon={<GiCard10Clubs size={70} />}
+            title={"Flashcards"}
+          />
+        </Row>
         <Row className="p-0 m-0">
           <DashboardCard
             href={"/my-dashboard/account-settings"}

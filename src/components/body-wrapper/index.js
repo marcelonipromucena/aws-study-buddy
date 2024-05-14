@@ -1,6 +1,6 @@
-import { PageWrapper, GrayBodyWrapper } from "./styles";
-import Navbar from "../navbar/navbar";
 import Breadcrumb from "../../components/breadcrumb";
+import Navbar from "../navbar/navbar";
+import { GrayBodyWrapper, PageWrapper } from "./styles";
 
 function BodyWrapper({ children, enableNavbar, breadcrumb }) {
   return (

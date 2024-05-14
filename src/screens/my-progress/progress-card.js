@@ -8,9 +8,9 @@ import {
 
 import { Col } from 'react-bootstrap';
 
-function ProgressCard({ bgcolor, title, value, icon }) {
+function ProgressCard({ bgcolor, title, value, icon,md }) {
   return (
-    <Col sm={12} md={3}>
+    <Col sm={12} md={md}>
       <ProgressWrapper bgcolor={bgcolor}>
         <WrapperProgressHeader>
           <ProgressItemTitle>{title}</ProgressItemTitle>
